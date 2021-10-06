@@ -87,7 +87,7 @@ class Tutorial(models.Model):
     title           = models.CharField(max_length=120)
     description     = models.TextField(null=True, blank=True)
     slug            = models.SlugField(blank=True, unique=True)
-    is_public      = models.BooleanField(default=True)
+    is_public       = models.BooleanField(default=True)
     author          = models.CharField(max_length=20)
     user            = models.ForeignKey(NewUser, on_delete=models.CASCADE, blank=True, null=True)
     
@@ -106,7 +106,7 @@ class Chapter(models.Model):
     title       =     models.CharField(max_length=120)
     description =     models.TextField(null=True, blank=True)
     slug        =     models.SlugField(blank=True, unique=True)
-    is_public      = models.BooleanField(default=True)
+    is_public   =     models.BooleanField(default=True)
     author      =     models.CharField(max_length=20)
     user        =     models.ForeignKey(NewUser, on_delete=models.CASCADE, blank=True, null=True)
 
@@ -122,7 +122,7 @@ class Book(models.Model):
     title           = models.CharField(max_length=120)
     description     = models.TextField(null=True, blank=True)
     isbn            = models.CharField(max_length=20)
-    is_public      = models.BooleanField(default=True)
+    is_public       = models.BooleanField(default=True)
     author          = models.CharField(max_length=20)
     user            = models.ForeignKey(NewUser, on_delete=models.CASCADE, blank=True, null=True)
 
